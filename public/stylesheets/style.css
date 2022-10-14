@@ -1,0 +1,835 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,500&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-family: 'Poppins', sans-serif;
+  list-style-type: none;
+  scroll-behavior: smooth;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+label, h2 {
+  text-transform: capitalize;
+}
+
+body {
+  background: -webkit-gradient(linear, left bottom, left top, from(#00000a), to(#1c1c22));
+  background: linear-gradient(to top, #00000a, #1c1c22);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.admin li {
+  background-color: rgba(255, 255, 0, 0.843);
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 5px 16px;
+  border-radius: 6px;
+  position: fixed;
+  right: 0px;
+  font-weight: bold;
+  cursor: pointer;
+  -webkit-transition: 0.7s;
+  transition: 0.7s;
+}
+
+.admin li:hover {
+  background: green;
+  color: white;
+  border: none;
+}
+
+#menu {
+  display: none;
+}
+
+.loginCover {
+  height: 100%;
+  width: 0;
+  background: rgba(0, 0, 0, 0.967);
+  margin-top: -2em;
+  position: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.loginCover h1 {
+  color: white;
+  -ms-flex-item-align: end;
+      -ms-grid-row-align: end;
+      align-self: end;
+  margin: 8px 12px 0 0;
+  cursor: pointer;
+}
+
+.loginCover h1:hover {
+  color: yellow;
+}
+
+.loginCover .login {
+  padding: 12px 16px 0 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2em;
+}
+
+.loginCover .login h2 {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  color: yellow;
+  text-transform: capitalize;
+}
+
+.loginCover .login form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 3em;
+  width: 270px;
+  padding: 14px 12px;
+  border-radius: 5px;
+}
+
+.loginCover .login form input {
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  background: transparent;
+  text-transform: capitalize;
+  font-weight: bold;
+  color: white;
+  height: 23px;
+}
+
+.loginCover .login form input:focus {
+  outline: none;
+}
+
+.loginCover .login form input::-webkit-input-placeholder {
+  text-transform: capitalize;
+  font-weight: bold;
+}
+
+.loginCover .login form input:-ms-input-placeholder {
+  text-transform: capitalize;
+  font-weight: bold;
+}
+
+.loginCover .login form input::-ms-input-placeholder {
+  text-transform: capitalize;
+  font-weight: bold;
+}
+
+.loginCover .login form input::placeholder {
+  text-transform: capitalize;
+  font-weight: bold;
+}
+
+.loginCover .login form button {
+  font-weight: bold;
+  height: 29px;
+  cursor: pointer;
+}
+
+.loginCover .login form button:hover {
+  background: green;
+  color: white;
+  border: none;
+  border-radius: 4px;
+}
+
+header {
+  background: -webkit-gradient(linear, left top, right top, from(#ffff04), to(blue));
+  background: linear-gradient(to right, #ffff04, blue);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 2em;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+}
+
+header h2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header h2 label {
+  color: black;
+  font-size: 30px;
+}
+
+header h2 img {
+  width: 80px;
+  height: 80px;
+  display: block;
+}
+
+section {
+  width: 100%;
+}
+
+section .btm {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+section .btm .appFrm {
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1.5em;
+  background: -webkit-gradient(linear, left top, left bottom, from(#ccf7ef), to(#b9e9d8));
+  background: linear-gradient(to bottom, #ccf7ef, #b9e9d8);
+  padding: 12px;
+  border-radius: 6px;
+}
+
+section .btm .appFrm h2 {
+  text-align: center;
+  background: #390707;
+  margin-bottom: 6px;
+  text-transform: capitalize;
+  border-radius: 4px;
+  padding: 6px 0;
+  color: white;
+}
+
+section .btm .appFrm #app {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 16px;
+}
+
+section .btm .appFrm #app button {
+  margin-top: 15px;
+  height: 35px;
+  font-weight: bolder;
+  text-transform: capitalize;
+  font-size: 16px;
+  cursor: pointer;
+  border: 1px solid green;
+  border-radius: 4px;
+}
+
+section .btm .appFrm #app button:hover {
+  background: green;
+  border: none;
+  color: white;
+  border-radius: 5px;
+}
+
+section .btm .appFrm #app .same {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+section .btm .appFrm #app .same label {
+  font-weight: bold;
+}
+
+section .btm .appFrm #app .same input {
+  -ms-flex-preferred-size: 60%;
+      flex-basis: 60%;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 2px solid black;
+  background: transparent;
+  text-transform: capitalize;
+  font-weight: bold;
+  font-size: 15px;
+}
+
+section .btm .appFrm #app .same input:focus {
+  outline: none;
+}
+
+section .btm .appFrm #app .ageGen .childage, section .btm .appFrm #app .ageGen .gender {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 12px;
+}
+
+section .receipt {
+  -ms-flex-preferred-size: 25%;
+      flex-basis: 25%;
+  height: -webkit-min-content;
+  height: -moz-min-content;
+  height: min-content;
+  background: -webkit-gradient(linear, left top, left bottom, from(black), to(#080920));
+  background: linear-gradient(to bottom, black, #080920);
+  padding: 12px 16px 26px 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2.3em;
+  border-radius: 7px;
+}
+
+section .receipt h2 {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  color: white;
+  text-transform: capitalize;
+}
+
+section .receipt form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2em;
+  background: rgba(25, 37, 2, 0.568);
+  padding: 14px 12px;
+  border-radius: 5px;
+}
+
+section .receipt form input {
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  background: transparent;
+  text-transform: capitalize;
+  font-weight: bold;
+  color: white;
+  height: 23px;
+}
+
+section .receipt form input:focus {
+  outline: none;
+}
+
+section .receipt form input::-webkit-input-placeholder {
+  text-transform: capitalize;
+  font-weight: bold;
+}
+
+section .receipt form input:-ms-input-placeholder {
+  text-transform: capitalize;
+  font-weight: bold;
+}
+
+section .receipt form input::-ms-input-placeholder {
+  text-transform: capitalize;
+  font-weight: bold;
+}
+
+section .receipt form input::placeholder {
+  text-transform: capitalize;
+  font-weight: bold;
+}
+
+section .receipt form button {
+  font-weight: bold;
+  height: 33px;
+  cursor: pointer;
+  margin-bottom: -28px;
+  text-transform: capitalize;
+}
+
+section .receipt form button:hover {
+  background: green;
+  color: white;
+  border: none;
+  border-radius: 4px;
+}
+
+#main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2em;
+}
+
+#main aside {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: #05d4ca;
+  width: 60%;
+  -webkit-box-shadow: 2px 2px 4px black;
+          box-shadow: 2px 2px 4px black;
+  border-radius: 5px;
+  padding: 12px 0px;
+  margin: 0 auto 2em auto;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#main aside form button {
+  background: white;
+  color: black;
+  border: 2px solid white;
+  cursor: pointer;
+  padding: 5px 16px;
+  border-top-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+  font-weight: bold;
+}
+
+#main aside form button:hover {
+  background: green;
+  color: white;
+}
+
+#main h2 {
+  color: white;
+  padding-left: 2.8em;
+}
+
+#main #studentDetails {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 3em;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#main #studentDetails h3 {
+  background: #05d4ca;
+  padding: 8px 30px;
+  border: none;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+#main #studentDetails h3:hover {
+  background: #00fa00;
+}
+
+#flex {
+  background-color: white;
+  margin: 2em auto 1.2em auto;
+  width: 90%;
+  border-radius: 8px;
+  padding: 9px 16px;
+}
+
+#flex #student #views {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 2em;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+  padding: 6px 0 0 0;
+}
+
+#flex #student #views form button {
+  cursor: pointer;
+}
+
+#flex #student table {
+  width: 100%;
+}
+
+#flex #student table tr th {
+  padding-bottom: 12px;
+}
+
+#flex #student table tr #hed {
+  padding: 0 0 16px 0;
+}
+
+#mainReceipt {
+  background-color: white;
+  width: 90%;
+  margin: 2em auto 0 auto;
+  border-radius: 12px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 16px 0 8px 0;
+  gap: 12px;
+}
+
+#mainReceipt .topRecipt {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 12px;
+}
+
+#mainReceipt .topRecipt #recptDetails {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 12px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+#mainReceipt #views {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 12px;
+}
+
+#mainReceipt #views form button {
+  cursor: pointer;
+}
+
+#editRecpt {
+  background: white;
+  width: 70%;
+  margin: 0 auto;
+  padding: 12px 16px;
+  border-radius: 12px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 12px;
+}
+
+#editRecpt form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 12px;
+}
+
+#editRecpt form #mainRecpt {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1em;
+}
+
+#editRecpt form #mainRecpt .same {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#editRecpt form #mainRecpt .same input {
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+}
+
+#editRecpt form #mainRecpt .same input:focus {
+  outline: none;
+}
+
+#editRecpt form .submit {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1em;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+}
+
+#editRecpt form .submit button {
+  border: none;
+  background: green;
+  color: white;
+  cursor: pointer;
+  padding: 5px 12px;
+  border-radius: 5px;
+}
+
+#editRecpt form .submit button:hover {
+  background: #52ccd4;
+  color: black;
+}
+
+footer {
+  height: 4em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+footer h4 {
+  color: white;
+}
+
+footer h4 a {
+  text-decoration: none;
+  color: orange;
+}
+
+footer h4 span {
+  border-left: 2px solid white;
+  padding: 0 12px;
+  margin-left: 12px;
+}
+
+#editReg {
+  width: 60%;
+  background: white;
+  padding: 12px 16px;
+  border-radius: 12px;
+  margin: 0px auto;
+}
+
+#editReg form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 12px;
+}
+
+#editReg form .same {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#editReg form .same label {
+  font-weight: bold;
+}
+
+#editReg form .same input {
+  -ms-flex-preferred-size: 60%;
+      flex-basis: 60%;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 2px solid black;
+  background: transparent;
+  text-transform: capitalize;
+  font-weight: bold;
+  font-size: 15px;
+}
+
+#editReg form .same input:focus {
+  outline: none;
+}
+
+#editReg form .ageGen .childage, #editReg form .ageGen .gender {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 12px;
+}
+
+#editReg form .submit {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 2em;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+  padding: 16px 0 1px 0;
+}
+
+#editReg form .submit button {
+  cursor: pointer;
+  border: none;
+  padding: 5px 12px;
+  background: green;
+  border-radius: 4px;
+  color: white;
+}
+
+#editReg form .submit button:hover {
+  background: #05d4ca;
+  color: black;
+}
+
+#stdReg {
+  display: none;
+}
+
+#recpt {
+  display: none;
+}
+
+#viewRegSection #viewReg {
+  background: white;
+  width: 40%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 12px 3px 12px 12px;
+  border-radius: 12px;
+  margin: 0 auto 0 auto;
+}
+
+#viewRegSection #viewPrev {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 12px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#viewRegSection #viewPrev a:hover {
+  color: orange;
+}
+
+#viewRegSection #viewPrev button {
+  cursor: pointer;
+  padding: 2px 8px;
+}
+
+#viewRegSection #viewPrev button:hover {
+  background: green;
+  color: white;
+}
+
+#viewReceiptSection #viewReceipt {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1em;
+  width: 30%;
+  margin: 0 auto 0 auto;
+  background: white;
+  padding: 12px 3px 12px 12px;
+  border-radius: 12px;
+}
+
+#viewReceiptSection #viewPrev {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 12px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#viewReceiptSection #viewPrev a:hover {
+  color: orange;
+}
+
+#viewReceiptSection #viewPrev button {
+  cursor: pointer;
+  padding: 2px 8px;
+}
+
+#viewReceiptSection #viewPrev button:hover {
+  background: green;
+  color: white;
+}
+/*# sourceMappingURL=style.css.map */
